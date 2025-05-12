@@ -12,5 +12,16 @@ describe("Make sure the serber boots up properly", () => {
         expect(response.body.message).toBe("Hello, world!");
 
         
-         })
-})
+         });
+
+    test("Post-test route reflects body data", async () => { 
+        let response = await request(app).post("/post-test").send({
+            message:"post-test body test content"
+
+        });
+        console.log(Object.keys(response.body))
+
+        expect(response.body.recievedData.message).toBe("post-test body test content");
+
+         });
+});
