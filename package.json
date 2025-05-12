@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test-doh": "jest --detectOpenHandles",
+    "test-watch": "jest --watch",
     "dev": "node --watch src/index.js",
     "start": "NODE_ENV=production node src/index.js"
   },
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/Angie-newbie/t2_w7_express-testing#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "doh": "^0.0.4",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "helmet": "^8.1.0",

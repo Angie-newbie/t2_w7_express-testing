@@ -1,7 +1,7 @@
 
 
 
-const {app} = require("../src/index.js");
+const {app} = require("../src/server.js");
 const request = require("supertest");
 
 describe("Make sure the serber boots up properly", () => {
@@ -9,7 +9,7 @@ describe("Make sure the serber boots up properly", () => {
         let response = await request(app).get("/");
 
         expect(response.statusCode).toBe(200);
-        expect(response.body.message).toBe("Hello Word");
+        expect(response.body.message).toBe("Hello, world!");
 
         
          })
